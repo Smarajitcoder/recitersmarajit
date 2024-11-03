@@ -1,0 +1,422 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  :root {
+    --text-color:#fefae0;
+    --main-color:#90e0ef;
+  } 
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(2,48,71,1) 0%, rgba(20,33,61,1) 35%, rgba(0,53,102,1) 100%);
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0,53,102,1) ;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 10px;
+}
+
+/* Intro */
+
+.home-body {
+  max-width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  margin-top: 70px;
+  align-items: center;
+}
+
+.text-side {
+  float: left;
+  width: 65%;
+  padding: 5px;
+  box-sizing: border-box;
+  color: var(--text-color);
+  text-align: justify;
+  margin-top: 5px;
+}
+
+.text-side h2 {
+  font-size: 65px;
+  font-weight: 800;
+  margin-top: 0;
+  color:#e8e8e4;
+}
+
+.text-side p {
+  font-size: 15px;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+.image-side {
+  float: left;
+  width: 35%;
+  box-sizing: border-box;
+}
+
+.image-side img {
+  width: 92%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.stylish-button {
+  text-decoration: none;
+  color:var(--text-color);
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 0.5s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1.5px;
+  border: 2px solid var(--text-color);
+}
+
+.stylish-button:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  background: #FF0000;
+  color: var(--text-color);
+  border: 2px solid #FF0000;
+}
+
+@media (max-width: 768px) {
+  
+  .home-body {
+    max-width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  
+  .text-side,
+  .image-side {
+      width: 100%;
+      padding: 20px;
+  }
+
+  .text-side h2 {
+    font-size: 38.5px;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* About Me*/
+
+.About-me {
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.About-me .text-side {
+  float: left;
+  width: 65%;
+  padding-right: 30px;
+  box-sizing: border-box;
+  color: var(--text-color);
+  text-align: justify;
+  margin-top: 5px;
+}
+
+.About-me .text-side h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.About-me .text-side p {
+  font-size: 15px;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+.About-me .image-side {
+  float: left;
+  width: 35%;
+  box-sizing: border-box;
+}
+
+.About-me .image-side img {
+  width: 92%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  
+  .About-me .home-body {
+    max-width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  
+  .About-me .text-side{
+      width: 100%;
+      padding: 10px;
+  }
+
+  .About-me .image-side{
+    width: 100%;
+    padding: 10px;
+}
+
+  .About-me .text-side h2 {
+    font-size: 35px;
+    font-weight: 800;
+    margin-top: 0;
+  }
+}
+
+/* Section Head */
+
+.sectionhead h2{
+  color: #e8e8e4;
+}
+
+/* Most viewed Videos on YouTube */
+
+.youtube-section {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.video-card:hover {
+  transform: scale(1.05);
+}
+
+.video-card iframe {
+  width: 100%;
+  display: block;
+}
+
+.video-info {
+  display: flex;
+  padding: 10px;
+}
+
+.video-details {
+  flex: 1;
+}
+
+.video-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0 0 5px;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+
+  .video-grid {
+      grid-template-columns: 1fr;
+  }
+
+}
+
+/* Upload your Story or Poetry */
+
+.upload-title {
+  color: var(--text-color);
+  padding: 25px;
+  text-align: center;
+}
+
+.download-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.download-item {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  max-width: 90%;
+  flex: 0 0 40%; 
+  padding: 20px;
+}
+
+.download-item h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.download-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+
+.download-link:hover {
+  background-color:#ffb703;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .download-item {
+    flex: 0 0 50%; 
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .download-item {
+    flex: 0 0 100%; 
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+
+/* Contact Me */
+
+.contact-me{
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.contact-address {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.contact-address {
+  color: var(--main-color);
+}
+
+.contact-address p {
+  font-size: 30px;
+}
+
+.contact-address {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.contact-address {
+  margin-right: 10px;
+}
+
+.contact-us-socialmedia {
+  color: var(--text-color);
+  font-size: 30px;
+  transition: 0.3s ease;
+  display:flex;
+  gap: 15px;
+}
+
+.contact-us-socialmedia a:hover {
+  color: var(--main-color);
+}
+
+button {
+  background: transparent;
+  position: relative;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid var(--text-color);
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: var(--text-color);
+  transition: 0.3s 0.1s ease-out;
+  text-align: center;
+}
+
+button span {
+  margin-left: 15px;
+  margin-right: 20px;
+  display: none;
+}
+
+button:hover {
+  color: black;
+  border: 2px solid #ffb703;
+  background-color: #ffb703;
+}
+
+@media (max-width: 768px) {
+
+  .contact-me{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  
+  .contact-address {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    text-align: left;
+  }
+  
+  .contact-us-socialmedia {
+    display:grid;
+    gap: 15px;
+  }
+
+  button span {
+    display:block;
+  }
+}
+
+
+
